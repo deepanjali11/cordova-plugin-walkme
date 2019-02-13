@@ -65,6 +65,12 @@ extern NSString *SDK_VERSION;
  */
 + (void)start:(NSString *)appId withSecretKey:(NSString *)appSecretKey;
 
+/**
+ * Restarts a new SDK session
+ *
+ */
++ (void)restart;
+
 /** 
  * Starts ABBI SDK - FOR HYBRID APPS ONLY!
  *
@@ -157,8 +163,17 @@ extern NSString *SDK_VERSION;
  * Usage Example :
  * [ABBI trigger:@"Show How To Order Credit Card"];
  */
-+ (void)trigger:(NSString *)myTriggerName;
++ (void)trigger:(NSString *)trigger;
 
+/**
+ * Launches a campaign by trigger key after redirecting the user to the given deep link
+ * Once invoked, the method will show the campaign WITHOUT any of its segments (if defined)
+ *
+ * @code
+ * Usage Example :
+ * [ABBI trigger:@"Show How To Order Credit Card" withDeepLink:@"myapp://main_screen"];
+ */
++ (void)trigger:(NSString*)trigger withDeepLink:(NSString*)deepLink;
 
 /**
  * Sets user id
@@ -178,5 +193,15 @@ extern NSString *SDK_VERSION;
  *
  */
 + (void)setCampaignInfoDelegate:(id<WMCampaignInfoDelegate>)delegate;
+
+/**
+ * Opens a URL
+ *
+ *@param url the URL that should be handled by the SDK
+ *@param options the options received from the app delegate "application:openURL:options:" method
+ *@return true if the SDK handled the openURL request successfully
+ *
+ */
++ (BOOL)openURL:(NSURL*)url options:(NSDictionary*)options;
 
 @end
