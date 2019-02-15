@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-plugin-walkme"
-        version="0.2.1">
+        id="cordova-plugin-walkme-ts"
+        version="0.2.2">
 
   <name>WalkMe Plugin</name>
 
