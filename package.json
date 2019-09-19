@@ -1,5 +1,5 @@
 {
-  "name": "cordova-plugin-walkme-ts",
+  "name": "cordova-plugin-walkme",
   "version": "0.2.2",
   "description": "Integrate WalkMe into your Cordova app.",
   "cordova": {
